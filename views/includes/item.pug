@@ -1,0 +1,9 @@
+li.list-group-item.list-group-item-action.d-flex.align-items-center.justify-content-between(data-id=item._id)
+    .div-form.shadow-sm.d-none.align-items-center
+        input.form-control.mr-3(value=item.todo autofocus='' autocomplete='off' type='text' style='flex: 1;' name='new-value-of-item-to-edit')
+        button.btn.btn-success.btn-sm.mr-1.save-changes Save Changes
+        button.btn.btn-outline-info.btn-sm.cancel-changes Cancel
+    span.item-text=item.todo
+    div.btn-group
+        button.edit-me.btn.btn-secondary.btn-sm.mr-1 Edit
+        button.delete-me.btn.btn-danger.btn-sm Delete

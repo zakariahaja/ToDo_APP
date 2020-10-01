@@ -1,0 +1,19 @@
+doctype html
+head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title Simple To-Do App
+    link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css' integrity='sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS' crossorigin='anonymous')
+    link(rel='icon', type='image/x-icon', href='/static/imgs/favicon.ico')
+.container
+    h1.display-4.text-center.py-1 To-Do App
+    .jumbotron.p-3.shadow-sm.create-form-container
+        form#create-form(action='' method='POST')
+            .d-flex.align-items-center
+                input.form-control.mr-3(name='new-item' autofocus='' autocomplete='off' type='text' style='flex: 1;')
+                button.btn.btn-primary.create-me Add New Item
+    ul.list-group.pb-5.list-of-items
+        each item in items
+            include includes/item.pug
+script(src='https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js')
+script(src='/static/js/main.js')
